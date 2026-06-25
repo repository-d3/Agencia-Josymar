@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia de Viajes Josymar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="burbujas-bg">
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+        <div class="burbuja"></div>
+    </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <h1>Agencia <span>Josymar</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#destinos">Destinos</a></li>
+                    <li><a href="#resenas">Reseñas</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#reserva" class="btn-nav">Reservar Ya</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h2>Descubre Destinos Maravillosos en Santa Marta</h2>
+            <p>Explora paisajes increíbles, culturas fascinantes y vive aventuras que recordarás para siempre.</p>
+            <a href="#destinos" class="btn-main">Ver Planes</a>
+        </div>
+    </section>
+
+    <section id="destinos" class="section-container bg-light-parallax">
+        <div class="section-title-block">
+            <span class="top-tag">NUESTROS PLANES</span>
+            <h2>Destinos Destacados</h2>
+            <div class="underline-bar"></div>
+            <p class="subtitle">Selecciona destino favorito y encuentra tu próximo viaje ideal.</p>
+        </div>
+
+        <div class="tabs-destinos">
+            <button class="tab-btn active" onclick="cambiarDestino(event, 'santa-marta')">Santa Marta</button>
+            <button class="tab-btn" onclick="cambiarDestino(event, 'la-guajira')">La Guajira</button>
+            <button class="tab-btn" onclick="cambiarDestino(event, 'cartagena')">Cartagena de Indias</button>
+            <button class="tab-btn" onclick="cambiarDestino(event, 'pasadias')">Pasadías Extras</button>
+        </div>
+
+ 
+        <div id="santa-marta" class="tab-content active">
+            <div class="destino-intro">
+                <h3>Aventuras en Santa Marta</h3>
+                <p>Santa Marta es un destino turístico en Colombia que combina cultura e historia con una gran diversidad natural. Se puede visitar la histórica Quinta de San Pedro Alejandrino, el Museo del Oro Tairona y el centro histórico. Ofrece playas como El Rodadero, Taganga y las del Parque Nacional Tayrona, así como actividades de naturaleza como buceo, senderismo y tubing en la Sierra Nevada, en lugares como Minca y Palomino</p>
+            </div>
+            <div class="grid-productos">
+                <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq1.png" alt="Parque Tayrona | Bahía Concha">
+                    </div>
+                    <div class="card-body">
+                        <h4>Parque Nacional Tayrona | Bahía Concha</h4>
+                        <p>Conocido como el Mar de los Tres Colores, es el primer sector del Parque Tayrona. </p>
+                        <button class="btn-card" onclick="abrirModal('bahia')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq2.jpg" alt="Parque Tayrona | Playa Cristal">
+                    </div>
+                    <div class="card-body">
+                        <h4>Parque Nacional Tayrona | Playa Cristal</h4>
+                        <p>Una maravillosa playa cristalina.</p>
+                        <button class="btn-card" onclick="abrirModal('cristal')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq3.png" alt="Cabo San Juan">
+                    </div>
+                    <div class="card-body">
+                        <h4>Parque Nacional Tayrona | Cabo San Juan del Guía</h4>
+                        <p>Combina la belleza de la naturaleza con la hospitalidad de los lugareños.</p>
+                        <button class="btn-card" onclick="abrirModal('cabosan')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq4.jpg" alt="Playa Blanca - Acuario">
+                    </div>
+                    <div class="card-body">
+                        <h4>Playa Blanca - Acuario</h4>
+                        <p>Disfruta del espectáculo de delfines y de una playa tranquila.</p>
+                        <button class="btn-card" onclick="abrirModal('placu')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq5.jpg" alt="Katamaran">
+                    </div>
+                    <div class="card-body">
+                        <h4>Tour Bahía en Katamaran</h4>
+                        <p>Disfruta de un hermoso día frente al mar Caribe.</p>
+                        <button class="btn-card" onclick="abrirModal('katamaran')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq6.png" alt="Inca Inca - Acuario">
+                    </div>
+                    <div class="card-body">
+                        <h4>Inca Inca - Acuario</h4>
+                        <p>Visita una hermosa playa.</p>
+                        <button class="btn-card" onclick="abrirModal('inca')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq7.png" alt="Actividades extra">
+                    </div>
+                    <div class="card-body">
+                        <h4>Actividades Extra</h4>
+                        <p>Disfruta de actividades adicionales.</p>
+                        <button class="btn-card" onclick="abrirModal('extra')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq8.png" alt="Fiesta Blanca">
+                    </div>
+                    <div class="card-body">
+                        <h4>Fiesta blanca</h4>
+                        <p>Vive una noche inolvidable.</p>
+                        <button class="btn-card" onclick="abrirModal('fiestabla')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq9.jpg" alt="Atardecer en Velero">
+                    </div>
+                    <div class="card-body">
+                        <h4>Atardecer en Velero</h4>
+                        <p>Contempla el atardecer de una manera única.</p>
+                        <button class="btn-card" onclick="abrirModal('sunset')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq10.jpg" alt="Bahía Concha en Velero">
+                    </div>
+                    <div class="card-body">
+                        <h4>Bahía Concha en Velero</h4>
+                        <p>Disfruta de una travesía inigualable en velero.</p>
+                        <button class="btn-card" onclick="abrirModal('bahive')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq11.jpg" alt="Tour por la Ciudad">
+                    </div>
+                    <div class="card-body">
+                        <h4>Tour por la Ciudad</h4>
+                        <p>Conoce los lugares más emblemáticos de Santa Marta.</p>
+                        <button class="btn-card" onclick="abrirModal('tourci')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq12.png" alt="Minca - Taganga">
+                    </div>
+                    <div class="card-body">
+                        <h4>Minca - Taganga</h4>
+                        <p>Combinan la selva y las cascadas de la Sierra Nevada con la brisa marina</p>
+                        <button class="btn-card" onclick="abrirModal('minta')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq13.jpg" alt="Cascadas de Marinka - Sierra Minca">
+                    </div>
+                    <div class="card-body">
+                        <h4>Cascadas de Marinka - Sierra Minca</h4>
+                        <p>Disfruta las piscinas naturales y poco profundas, perfectas para un baño revitalizante rodeado de naturaleza.</p>
+                        <button class="btn-card" onclick="abrirModal('cascama')">Más Información</button>
+                    </div>
+                </div>
+                     <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq14.jpg" alt="Ruta del Café y Cacao">
+                    </div>
+                    <div class="card-body">
+                        <h4>Ruta del Café y Cacao</h4>
+                        <p>Descubre la historia detrás de estos ingredientes.</p>
+                        <button class="btn-card" onclick="abrirModal('rutaca')">Más Información</button>
+                    </div>
+                </div>
+                     <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq15.jpg" alt="Cerro Kennedy">
+                    </div>
+                    <div class="card-body">
+                        <h4>Cerro Kennedy</h4>
+                        <p>Se aprecian simultáneamente el Mar Caribe y los picos nevados Colón y Bolívar.</p>
+                        <button class="btn-card" onclick="abrirModal('cerrok')">Más Información</button>
+                    </div>
+                </div>
+                     <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq16.jpg" alt="Taironaka - Don Diego">
+                    </div>
+                    <div class="card-body">
+                        <h4>Taironaka - Don Diego</h4>
+                        <p>Visita el paraíso arqueológico y ecológico en el que se encuentran restos del asentamiento de una ciudad Tayrona con mas de mil anos de antiguedad.</p>
+                        <button class="btn-card" onclick="abrirModal('taironaka')">Más Información</button>
+                    </div>
+                </div>
+                     <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq17.jpg" alt="Ciudad Perdida">
+                    </div>
+                    <div class="card-body">
+                        <h4>Ciudad Perdida</h4>
+                        <p>Atrévete a conocer el antiguo asentamiento indígena y joya arqueológica de la civilización Tayrona, ubicado en la Sierra Nevada de Santa Marta.</p>
+                        <button class="btn-card" onclick="abrirModal('cuidadp')">Más Información</button>
+                    </div>
+                </div>
+                     <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq18.png" alt="Playa Calderon">
+                    </div>
+                    <div class="card-body">
+                        <h4>Playa Calderon</h4>
+                        <p>Una playa privada perfecta para descansar y relajarte en sus aguas tranquilas.</p>
+                        <button class="btn-card" onclick="abrirModal('playacal')">Más Información</button>
+                    </div>
+                </div>
+                      <div class="card animar-scroll">
+                    <div class="card-img-wrapper">
+                        <img src="paq19.jpg" alt="Buceo con Tanque">
+                    </div>
+                    <div class="card-body">
+                        <h4>Buceo con Tanque</h4>
+                        <p>Experimenta una de las actividades más populares y divertidas de la región.</p>
+                        <button class="btn-card" onclick="abrirModal('buceoc')">Más Información</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="la-guajira" class="tab-content">
+            <div class="destino-intro">
+                <h3>Experiencias en La Guajira</h3>
+                <p>La Guajira ofrece turismo de naturaleza, cultura y aventura, destacando destinos como Punta Gallinas, el Cabo de la Vela, las Dunas de Taroa y el Parque Nacional Natural Macuira. Es un lugar con riqueza natural y ancestral, hogar del pueblo Wayuu,con experiencias que incluyen explorar desiertos, playas, avistar flamencos y conocer la cultura local.</p>
+            </div>
+            <div class="grid-productos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq22.png" alt="Buritaca">
+                    </div>
+                    <div class="card-body">
+                        <h4>Buritaca</h4>
+                        <p>Uno de los balnearios más famosos de Colombia.</p>
+                        <button class="btn-card" onclick="abrirModal('buritaca')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq23.png" alt="Palomino">
+                    </div>
+                    <div class="card-body">
+                        <h4>Palomino</h4>
+                        <p>Explora uno de los destinos más especiales del Caribe colombiano.</p>
+                        <button class="btn-card" onclick="abrirModal('palomino')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq24.jpg" alt="Cabo de la Vela">
+                    </div>
+                    <div class="card-body">
+                        <h4>Cabo de la Vela</h4>
+                        <p>Un destino mágico y sagrado ubicado en la Alta Guajira, Colombia.</p>
+                        <button class="btn-card" onclick="abrirModal('cabode')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq25.jpg" alt="Punto Gallina">
+                    </div>
+                    <div class="card-body">
+                        <h4>Punto Gallina</h4>
+                        <p>Destaca por sus imponentes dunas de arena, acantilados y la cultura indígena Wayúu.</p>
+                        <button class="btn-card" onclick="abrirModal('puntog')">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="cartagena" class="tab-content">
+            <div class="destino-intro">
+                <h3>Experiencias en Cartagena de Indias</h3>
+                <p>Cartagena es un destino turístico popular que ofrece una combinación de historia, cultura y naturaleza. Los lugares imperdibles incluyen el centro histórico amurallado y el barrio de Getsemaní, el Castillo de San Felipe de Barajas y las Islas del Rosario.Además de explorar el centro histórico, se recomienda visitar la Torre del Reloj, la Plaza de los Coches y el Santuario de San Pedro Claver. Para excursiones más lejanas, se pueden considerar las Islas del Rosario o el volcán de lodo de Totumo.</p>
+            </div>
+            <div class="grid-productos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq26.png" alt="Playa blanca Baru - Islas del rosario">
+                    </div>
+                    <div class="card-body">
+                        <h4>Playa blanca Baru - Islas del rosario</h4>
+                        <p>Un sitio muy turístico en Cartagena es la Isla Barú, famosa por sus arenas blancas y su agua cristalina. Un destino perfecto para la aventura y el descanso.</p>
+                        <button class="btn-card" onclick="abrirModal('baruis')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq27.jpg" alt="Playa blanca Baru - Aviario - plancton">
+                    </div>
+                    <div class="card-body">
+                        <h4>Playa blanca Baru - Aviario - plancton</h4>
+                        <p>Conozca todas las atracciones de este increíble destino y disfrute de su viaje.</p>
+                        <button class="btn-card" onclick="abrirModal('barpla')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq28.png" alt="5 islas con plancton">
+                    </div>
+                    <div class="card-body">
+                        <h4>5 islas con plancton</h4>
+                        <p>Incluye un recorrido diurno por las Islas del Rosario, Cholón y Barú, y culmina al atardecer observando el fenómeno natural del plancton bioluminiscente en el agua.</p>
+                        <button class="btn-card" onclick="abrirModal('fives')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq29.jpg" alt="Cholon Forever">
+                    </div>
+                    <div class="card-body">
+                        <h4>Cholon Forever</h4>
+                        <p>Isla Cholón es sinónimo de fiestas, diversión y botes de lujo. Se trata de una paradisíaca playa ubicada en la Isla de Barú, que hace parte del Parque Nacional Natural Corales del Rosario.</p>
+                        <button class="btn-card" onclick="abrirModal('cholon')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq30.jpg" alt="Sunset Beach">
+                    </div>
+                    <div class="card-body">
+                        <h4>Sunset Beach</h4>
+                        <p>Disfruta de una vista increíble del atardecer sobre el mar y la ciudad amurallada.</p>
+                        <button class="btn-card" onclick="abrirModal('sunbea')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq31.jpg" alt="Playa Tranquila">
+                    </div>
+                    <div class="card-body">
+                        <h4>Playa Tranquila</h4>
+                        <p>Un hermoso rincón de arena blanca y aguas cristalinas ubicado en la Isla de Barú, a 45 minutos de Cartagena</p>
+                        <button class="btn-card" onclick="abrirModal('playatran')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq32.png" alt="Isla cocoliso open bar premium">
+                    </div>
+                    <div class="card-body">
+                        <h4>Isla cocoliso open bar premium</h4>
+                        <p>El complejo combina la naturaleza virgen del Caribe con servicios modernos para el descanso y la diversión.</p>
+                        <button class="btn-card" onclick="abrirModal('cocoli')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq33.jpg" alt="Isla Lizamar">
+                    </div>
+                    <div class="card-body">
+                        <h4>Isla Lizamar</h4>
+                        <p>Siente el Caribe en su forma más pura, natural y auténtica, en las Islas del Rosario.</p>
+                        <button class="btn-card" onclick="abrirModal('islali')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq34.jpg" alt="Bora Bora club">
+                    </div>
+                    <div class="card-body">
+                        <h4>Bora Bora club</h4>
+                        <p>Es famoso por su ambiente de fiesta, música de DJ en vivo, camas balinesas y servicio de pasadía.</p>
+                        <button class="btn-card" onclick="abrirModal('borabo')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq35.jpg" alt="Palmarito Beach">
+                    </div>
+                    <div class="card-body">
+                        <h4>Palmarito Beach</h4>
+                        <p>Se destaca por ser un refugio tranquilo con arenas blancas, aguas calmadas sin olas y por estar libre del acoso de vendedores ambulantes.</p>
+                        <button class="btn-card" onclick="abrirModal('palmari')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq36.jpg" alt="Atardecer en Catamaran Flamante">
+                    </div>
+                    <div class="card-body">
+                        <h4>Atardecer en Catamaran Flamante</h4>
+                        <p>Siente la libertad a bordo de Flamante e inmortaliza una experiencia innolvidable.</p>
+                        <button class="btn-card" onclick="abrirModal('catama')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq37.png" alt="Isla Palma">
+                    </div>
+                    <div class="card-body">
+                        <h4>Isla Palma</h4>
+                        <p>Exclusiva isla privada ubicada en el archipiélago de San Bernardo.</p>
+                        <button class="btn-card" onclick="abrirModal('islapal')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq38.png" alt="Mucura - Tintipan - Islote de Santa cruz">
+                    </div>
+                    <div class="card-body">
+                        <h4>Mucura - Tintipan - Islote de Santa cruz</h4>
+                        <p>Son famosas por sus aguas cristalinas, manglares y rica cultura local.</p>
+                        <button class="btn-card" onclick="abrirModal('mutis')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq39.png" alt="Islas del rosario en Catamaran Flamante">
+                    </div>
+                    <div class="card-body">
+                        <h4>Islas del rosario en Catamaran Flamante</h4>
+                        <p>Es la embarcación más grande de su tipo en el país, ideal si buscas un viaje amplio, estable y sin los movimientos bruscos de las lanchas rápidas.</p>
+                        <button class="btn-card" onclick="abrirModal('islaros')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq40.jpg" alt="Volcan del Totumo">
+                    </div>
+                    <div class="card-body">
+                        <h4>Volcan del Totumo</h4>
+                        <p>Es famoso a nivel mundial porque los viajeros pueden ascender por una escalera rústica, ingresar a su cráter y flotar sin ningún esfuerzo debido a la alta densidad de su lodo templado.</p>
+                        <button class="btn-card" onclick="abrirModal('volcato')">Más Información</button>
+                    </div>
+                </div>
+                 <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq41.jpg" alt="Tour Bahía Rumbera">
+                    </div>
+                    <div class="card-body">
+                        <h4>Tour Bahía Rumbera</h4>
+                        <p>Es una de las experiencias nocturnas más populares en Cartagena de Indias, ideal para disfrutar de música, baile y licores mientras navegas por la bahía.</p>
+                        <button class="btn-card" onclick="abrirModal('bahiarum')">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="pasadias" class="tab-content">
+            <div class="destino-intro">
+                <h3>Pasadías en Cartagena y Barranquilla</h3>
+                <p>Pasea entre fortalezas e historias coloniales colonizadas y navega hacia cayos e islas tropicales de ensueño.</p>
+            </div>
+            <div class="grid-productos">
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq20.jpg" alt="City Tour Cartagena">
+                    </div>
+                    <div class="card-body">
+                        <h4>Pasadía en Cartagena</h4>
+                        <button class="btn-card" onclick="abrirModal('cartagena')">Más Información</button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-img-wrapper">
+                        <img src="paq21.png" alt="City Tour Barranquilla">
+                    </div>
+                    <div class="card-body">
+                        <h4>Pasadía en Barranquilla</h4>
+                        <button class="btn-card" onclick="abrirModal('barranquilla')">Más Información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="resenas" class="section-container bg-blue-deep text-white">
+        <div class="section-title-block">
+            <span class="top-tag tag-white">TESTIMONIOS</span>
+            <h2>Lo que dicen nuestros viajeros</h2>
+            <div class="underline-bar bar-white"></div>
+        </div>
+
+        <div class="carrusel-contenedor">
+            <div class="carrusel-track">
+                <div class="resena-box">
+                    <div class="estrellas">★★★★★</div>
+                    <p class="resena-texto">"Fue la mejor experiencia de mi vida. La organización del tour a la Bahía fue impecable y el guía muy atento."</p>
+                    <h5 class="resena-autor">- Carlos Mendoza</h5>
+                </div>
+                <div class="resena-box">
+                    <div class="estrellas">★★★★★</div>
+                    <p class="resena-texto">"El trekking a la cascada superó mis expectativas. Paisajes brutales y adrenalina al 100%. ¡Repetiré seguro!"</p>
+                    <h5 class="resena-autor">- Andrea Gomez</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reserva" class="section-container">
+        <div class="section-title-block">
+            <span class="top-tag">COTIZACIÓN</span>
+            <h2>Separa tu cupo</h2>
+            <div class="underline-bar"></div>
+            <p class="subtitle">Completa tus datos y coordina los métodos de pago directamente por WhatsApp con nosotros.</p>
+        </div>
+
+        <div class="form-reserva">
+            <form id="whatsappForm" onsubmit="enviarAWhatsApp(event)">
+                <div class="form-group">
+                    <label for="tour-seleccionado">Plan Seleccionado</label>
+                    <input type="text" id="tour-seleccionado" value="Ninguno seleccionado" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Tu Nombre Completo</label>
+                    <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="nombre">Número de personas</label>
+                    <input type="text" id="numero" placeholder="Ej. 5" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha Estimada de Viaje</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <button type="submit" class="btn-submit">💬 Chatear con la Agencia para Reservar</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contacto" class="section-container bg-light-parallax">
+        <div class="contact-grid">
+            <div class="contact-box">
+                <h4>UBICACIÓN</h4>
+                <p>Cl. 8 #2-78, Gaira, Santa Marta, Magdalena</p>
+            </div>
+            <div class="contact-box">
+                <h4>HORARIO</h4>
+                <p>Todos los días de 8:00 AM - 9:00 PM</p>
+            </div>
+            <div class="contact-box">
+                <h4>REDES SOCIALES</h4>
+                <a href="https://www.instagram.com/agenciajosymar/">Ir a instagram</a><br>
+                <a href="https://www.facebook.com/share/16xi1htA3r/">Ir a facebook</a>
+            </div>
+        </div>
+    </section>
+
+    <div id="tourModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="cerrarModal()">&times;</span>
+            <h3 id="modal-titulo">Título del Plan</h3>
+            <p id="modal-descripcion">Descripción detallada...</p>
+ 
+            <button id="modal-btn-reservar" class="btn-submit">Seleccionar este Plan y Reservar</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; Agencia Josymar. Todos los derechos reservados. Diseñado para Aventureros.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
